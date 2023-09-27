@@ -1122,6 +1122,8 @@ namespace MissionPlanner.GCSViews
             this.tabGauges.Name = "tabGauges";
             this.tabGauges.UseVisualStyleBackColor = true;
             this.tabGauges.Resize += new System.EventHandler(this.tabPage1_Resize);
+
+
             // 
             // Gvspeed
             // 
@@ -1129,8 +1131,8 @@ namespace MissionPlanner.GCSViews
             resources.ApplyResources(this.Gvspeed, "Gvspeed");
             this.Gvspeed.BaseArcColor = System.Drawing.Color.Transparent;
             this.Gvspeed.BaseArcRadius = 60;
-            this.Gvspeed.BaseArcStart = 20;
-            this.Gvspeed.BaseArcSweep = 320;
+            this.Gvspeed.BaseArcStart = 10;
+            this.Gvspeed.BaseArcSweep = 340;
             this.Gvspeed.BaseArcWidth = 2;
             this.Gvspeed.Cap_Idx = ((byte)(0));
             this.Gvspeed.CapColor = System.Drawing.Color.White;
@@ -1142,7 +1144,7 @@ namespace MissionPlanner.GCSViews
         System.Drawing.Color.Black};
             this.Gvspeed.CapPosition = new System.Drawing.Point(65, 85);
             this.Gvspeed.CapsPosition = new System.Drawing.Point[] {
-        new System.Drawing.Point(65, 85),
+        new System.Drawing.Point(58, 40),
         new System.Drawing.Point(30, 55),
         new System.Drawing.Point(10, 10),
         new System.Drawing.Point(10, 10),
@@ -1153,13 +1155,20 @@ namespace MissionPlanner.GCSViews
         "",
         "",
         ""};
-            this.Gvspeed.CapText = "VSI";
+            this.Gvspeed.CapText =
+$@"vertical
+ speed
+
+
+   {this.Gvspeed.Value0.ToString("F2")}";
             this.Gvspeed.Center = new System.Drawing.Point(75, 75);
             this.Gvspeed.DataBindings.Add(new System.Windows.Forms.Binding("Value0", this.bindingSourceGaugesTab, "verticalspeed", true));
-            this.Gvspeed.MaxValue = 10F;
-            this.Gvspeed.MinValue = -10F;
+            this.Gvspeed.MaxValue = 8F;
+            this.Gvspeed.MinValue = -8F;
             this.Gvspeed.Name = "Gvspeed";
             this.Gvspeed.Need_Idx = ((byte)(3));
+
+
             this.Gvspeed.NeedleColor1 = AGaugeApp.AGauge.NeedleColorEnum.Gray;
             this.Gvspeed.NeedleColor2 = System.Drawing.Color.White;
             this.Gvspeed.NeedleEnabled = false;
@@ -1170,22 +1179,22 @@ namespace MissionPlanner.GCSViews
         AGaugeApp.AGauge.NeedleColorEnum.Gray,
         AGaugeApp.AGauge.NeedleColorEnum.Gray};
             this.Gvspeed.NeedlesColor2 = new System.Drawing.Color[] {
-        System.Drawing.Color.White,
-        System.Drawing.Color.White,
-        System.Drawing.Color.White,
-        System.Drawing.Color.White};
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.Gray};
             this.Gvspeed.NeedlesEnabled = new bool[] {
         true,
         false,
         false,
         false};
             this.Gvspeed.NeedlesRadius = new int[] {
-        50,
+        38,
         30,
         50,
         80};
             this.Gvspeed.NeedlesType = new int[] {
-        0,
+        1,
         0,
         0,
         0};
@@ -1239,25 +1248,28 @@ namespace MissionPlanner.GCSViews
         0F,
         0F};
             this.Gvspeed.RangeStartValue = 0F;
-            this.Gvspeed.ScaleLinesInterColor = System.Drawing.Color.White;
-            this.Gvspeed.ScaleLinesInterInnerRadius = 52;
-            this.Gvspeed.ScaleLinesInterOuterRadius = 60;
-            this.Gvspeed.ScaleLinesInterWidth = 1;
+
+            this.Gvspeed.ScaleLinesInterColor = System.Drawing.Color.Gray;
+            this.Gvspeed.ScaleLinesInterInnerRadius = 60;
+            this.Gvspeed.ScaleLinesInterOuterRadius = 67;
+            this.Gvspeed.ScaleLinesInterWidth = 0;
             this.Gvspeed.ScaleLinesMajorColor = System.Drawing.Color.White;
-            this.Gvspeed.ScaleLinesMajorInnerRadius = 50;
-            this.Gvspeed.ScaleLinesMajorOuterRadius = 60;
+            this.Gvspeed.ScaleLinesMajorInnerRadius = 58;
+            this.Gvspeed.ScaleLinesMajorOuterRadius = 67;
             this.Gvspeed.ScaleLinesMajorStepValue = 2F;
             this.Gvspeed.ScaleLinesMajorWidth = 2;
-            this.Gvspeed.ScaleLinesMinorColor = System.Drawing.Color.White;
-            this.Gvspeed.ScaleLinesMinorInnerRadius = 55;
-            this.Gvspeed.ScaleLinesMinorNumOf = 9;
-            this.Gvspeed.ScaleLinesMinorOuterRadius = 60;
-            this.Gvspeed.ScaleLinesMinorWidth = 1;
+            this.Gvspeed.ScaleLinesMinorColor = System.Drawing.Color.Gray;
+            this.Gvspeed.ScaleLinesMinorInnerRadius = 60;
+            this.Gvspeed.ScaleLinesMinorNumOf = 5;
+            this.Gvspeed.ScaleLinesMinorOuterRadius = 67;
+            this.Gvspeed.ScaleLinesMinorWidth = 0;
+
+
             this.Gvspeed.ScaleNumbersColor = System.Drawing.Color.White;
             this.Gvspeed.ScaleNumbersFormat = "";
-            this.Gvspeed.ScaleNumbersRadius = 42;
+            this.Gvspeed.ScaleNumbersRadius = 48;
             this.Gvspeed.ScaleNumbersRotation = 0;
-            this.Gvspeed.ScaleNumbersStartScaleLine = 1;
+            this.Gvspeed.ScaleNumbersStartScaleLine = 2;
             this.Gvspeed.ScaleNumbersStepScaleLines = 1;
             this.Gvspeed.Value = 0F;
             this.Gvspeed.Value0 = 0F;
@@ -1429,8 +1441,8 @@ namespace MissionPlanner.GCSViews
             resources.ApplyResources(this.Gspeed, "Gspeed");
             this.Gspeed.BaseArcColor = System.Drawing.Color.Transparent;
             this.Gspeed.BaseArcRadius = 70;
-            this.Gspeed.BaseArcStart = 135;
-            this.Gspeed.BaseArcSweep = 270;
+            this.Gspeed.BaseArcStart = 90;
+            this.Gspeed.BaseArcSweep = 180;
             this.Gspeed.BaseArcWidth = 2;
             this.Gspeed.Cap_Idx = ((byte)(0));
             this.Gspeed.CapColor = System.Drawing.Color.White;
@@ -1440,10 +1452,10 @@ namespace MissionPlanner.GCSViews
         System.Drawing.Color.Black,
         System.Drawing.Color.Black,
         System.Drawing.Color.Black};
-            this.Gspeed.CapPosition = new System.Drawing.Point(58, 85);
+            this.Gspeed.CapPosition = new System.Drawing.Point(90, 55);
             this.Gspeed.CapsPosition = new System.Drawing.Point[] {
-        new System.Drawing.Point(58, 85),
-        new System.Drawing.Point(50, 110),
+        new System.Drawing.Point(82, 30),
+        new System.Drawing.Point(10, 110),
         new System.Drawing.Point(10, 10),
         new System.Drawing.Point(10, 10),
         new System.Drawing.Point(10, 10)};
@@ -1453,110 +1465,121 @@ namespace MissionPlanner.GCSViews
         "",
         "",
         ""};
-            this.Gspeed.CapText = "Speed";
+            this.Gspeed.CapText = 
+$@"
+_________
+|air speed|
+|       {this.Gspeed.Value0}       |
+|________|";
             this.Gspeed.Center = new System.Drawing.Point(75, 75);
             this.Gspeed.DataBindings.Add(new System.Windows.Forms.Binding("Value0", this.bindingSourceGaugesTab, "airspeed", true));
             this.Gspeed.DataBindings.Add(new System.Windows.Forms.Binding("Value1", this.bindingSourceGaugesTab, "groundspeed", true));
-            this.Gspeed.MaxValue = 60F;
+            this.Gspeed.MaxValue = 50F;
             this.Gspeed.MinValue = 0F;
             this.Gspeed.Name = "Gspeed";
             this.Gspeed.Need_Idx = ((byte)(3));
+
             this.Gspeed.NeedleColor1 = AGaugeApp.AGauge.NeedleColorEnum.Gray;
-            this.Gspeed.NeedleColor2 = System.Drawing.Color.Brown;
+            this.Gspeed.NeedleColor2 = System.Drawing.Color.White;
             this.Gspeed.NeedleEnabled = false;
             this.Gspeed.NeedleRadius = 70;
             this.Gspeed.NeedlesColor1 = new AGaugeApp.AGauge.NeedleColorEnum[] {
         AGaugeApp.AGauge.NeedleColorEnum.Gray,
-        AGaugeApp.AGauge.NeedleColorEnum.Red,
-        AGaugeApp.AGauge.NeedleColorEnum.Blue,
+        AGaugeApp.AGauge.NeedleColorEnum.Gray,
+        AGaugeApp.AGauge.NeedleColorEnum.Gray,
         AGaugeApp.AGauge.NeedleColorEnum.Gray};
             this.Gspeed.NeedlesColor2 = new System.Drawing.Color[] {
-        System.Drawing.Color.White,
+        System.Drawing.Color.Gray,
         System.Drawing.Color.White,
         System.Drawing.Color.White,
         System.Drawing.Color.Brown};
             this.Gspeed.NeedlesEnabled = new bool[] {
         true,
-        true,
+        false,
         false,
         false};
             this.Gspeed.NeedlesRadius = new int[] {
-        50,
+        30,
         50,
         70,
         70};
             this.Gspeed.NeedlesType = new int[] {
-        0,
+        1,
         0,
         0,
         0};
             this.Gspeed.NeedlesWidth = new int[] {
         2,
-        1,
+        2,
         2,
         2};
             this.Gspeed.NeedleType = 0;
             this.Gspeed.NeedleWidth = 2;
             this.Gspeed.Range_Idx = ((byte)(2));
             this.Gspeed.RangeColor = System.Drawing.Color.Orange;
-            this.Gspeed.RangeEnabled = false;
+            this.Gspeed.RangeEnabled = true;
             this.Gspeed.RangeEndValue = 50F;
             this.Gspeed.RangeInnerRadius = 1;
             this.Gspeed.RangeOuterRadius = 70;
             this.Gspeed.RangesColor = new System.Drawing.Color[] {
         System.Drawing.Color.LightGreen,
-        System.Drawing.Color.Red,
-        System.Drawing.Color.Orange,
+        System.Drawing.Color.Yellow,
         System.Drawing.SystemColors.Control,
-        System.Drawing.SystemColors.Control};
+        System.Drawing.Color.White,
+        System.Drawing.Color.Red};
             this.Gspeed.RangesEnabled = new bool[] {
+        true,
+        true,
         false,
-        false,
-        false,
-        false,
-        false};
+        true,
+        true};
             this.Gspeed.RangesEndValue = new float[] {
         35F,
-        60F,
-        50F,
+        40F,
         0F,
-        0F};
+        30F,
+        42F};
             this.Gspeed.RangesInnerRadius = new int[] {
-        1,
-        1,
-        1,
-        70,
-        70};
+        68,
+        68,
+        0,
+        52,
+        60};
             this.Gspeed.RangesOuterRadius = new int[] {
         70,
         70,
-        70,
-        80,
-        80};
+        0,
+        54,
+        72};
             this.Gspeed.RangesStartValue = new float[] {
-        0F,
-        50F,
+        20F,
         35F,
         0F,
-        0F};
+        16F,
+        40F};
             this.Gspeed.RangeStartValue = 35F;
-            this.Gspeed.ScaleLinesInterColor = System.Drawing.Color.White;
-            this.Gspeed.ScaleLinesInterInnerRadius = 52;
-            this.Gspeed.ScaleLinesInterOuterRadius = 60;
-            this.Gspeed.ScaleLinesInterWidth = 1;
-            this.Gspeed.ScaleLinesMajorColor = System.Drawing.Color.White;
-            this.Gspeed.ScaleLinesMajorInnerRadius = 50;
-            this.Gspeed.ScaleLinesMajorOuterRadius = 60;
+
+            this.Gspeed.ScaleLinesInterColor = System.Drawing.Color.Gray;
+            this.Gspeed.ScaleLinesInterInnerRadius = 60;
+            this.Gspeed.ScaleLinesInterOuterRadius = 66;
+            this.Gspeed.ScaleLinesInterWidth = 0;
+
+
+            this.Gspeed.ScaleLinesMajorColor = System.Drawing.Color.Gray;
+            this.Gspeed.ScaleLinesMajorInnerRadius = 60;
+            this.Gspeed.ScaleLinesMajorOuterRadius = 66;
             this.Gspeed.ScaleLinesMajorStepValue = 10F;
-            this.Gspeed.ScaleLinesMajorWidth = 2;
-            this.Gspeed.ScaleLinesMinorColor = System.Drawing.Color.White;
-            this.Gspeed.ScaleLinesMinorInnerRadius = 55;
-            this.Gspeed.ScaleLinesMinorNumOf = 9;
-            this.Gspeed.ScaleLinesMinorOuterRadius = 60;
-            this.Gspeed.ScaleLinesMinorWidth = 1;
+            this.Gspeed.ScaleLinesMajorWidth = 0;
+
+            this.Gspeed.ScaleLinesMinorColor = System.Drawing.Color.Gray;
+            this.Gspeed.ScaleLinesMinorInnerRadius = 60;
+            this.Gspeed.ScaleLinesMinorNumOf = 6;
+            this.Gspeed.ScaleLinesMinorOuterRadius = 66;
+            this.Gspeed.ScaleLinesMinorWidth = 0;
+
             this.Gspeed.ScaleNumbersColor = System.Drawing.Color.White;
             this.Gspeed.ScaleNumbersFormat = null;
-            this.Gspeed.ScaleNumbersRadius = 42;
+            this.Gspeed.ScaleNumbersRadius = 45;
             this.Gspeed.ScaleNumbersRotation = 0;
             this.Gspeed.ScaleNumbersStartScaleLine = 1;
             this.Gspeed.ScaleNumbersStepScaleLines = 1;
